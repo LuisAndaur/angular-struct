@@ -1,0 +1,26 @@
+<main class="text-center cMain">
+  <section class="form-signin w-100 m-auto contenedor">
+
+    <form [formGroup]="user" class="caja">
+      <img class="logo" src="../../../assets/img/logo.png" alt="">
+      <h1 class="h3 mb-3 fw-normal">Registrarse</h1>
+
+      <div class="form-floating flotante">
+        <input type="email" class="form-control" id="validationCustom03" id="floatingInput" formControlName="email" placeholder="email@example.com">
+        <label for="floatingInput">Correo electrónico</label>
+      </div>
+      <div class="form-floating flotante">
+        <input type="password" class="form-control" id="floatingPassword" formControlName="pass" placeholder="contraseña">
+        <label for="floatingPassword">Contraseña</label>
+      </div>
+
+      <div class="checkbox mb-3">
+        <label>
+          <input type="checkbox" value="remember-me"> Recordarme
+        </label>
+      </div>
+      <button class="w-100 btn btn-lg btn-primary" [disabled]="user.invalid" type="button" (click)="ingresar()" >Ingresar</button>
+
+    </form>
+  </section>
+</main>
